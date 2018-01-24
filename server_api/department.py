@@ -16,10 +16,21 @@ def get_department_list(access_token, fetch_child=True, parentid=1):
     }
     url += urlencode(args)
     return http_get(url)
+ 
+ 
+def get_department_detail(access_token, department_id):
+    url = 'https://%s/department/get?' % API_ADDR
+    args = {
+        'access_token': access_token,
+        'id': department_id
+
+    }
+    url += urlencode(args)
+    return http_get(url)    
 
 
 def create_department(access_token, name, parentid, order=1):
-    url = 'https://%s/department/create' % API_ADDR
+    url = 'https://%s/department/create?' % API_ADDR
     args = {
         'access_token': access_token
     }
@@ -54,6 +65,26 @@ def delete_department(access_token, department_id):
     args = {
         'access_token': access_token,
         'id': department_id
+    }
+    url += urlencode(args)
+    return http_get(url)
+
+    
+def get_parent_depts_by_dept(access_token, department_id):
+    url = 'https://%s/department/list_parent_depts_by_dept?' % API_ADDR
+    args = {
+        'access_token': access_token,
+        'id': department_id
+    }
+    url += urlencode(args)
+    return http_get(url)
+    
+    
+def get_parent_depts_by_user(access_token, user_id):
+    url = 'https://%s/department/list_parent_depts?' % API_ADDR
+    args = {
+        'access_token': access_token,
+        'userId': user_id
     }
     url += urlencode(args)
     return http_get(url)
