@@ -75,7 +75,7 @@ def handle_result(result):
         result.pop('errmsg')
         return True, result
     else:
-        errcode = result.get('erroce')
+        errcode = result.get('errcode')
         errmsg = result.get('errmsg')
-        logger.error('Error: %s | %s') % (errcode, errmsg)
+        logger.error("Error: %s | %s", errcode, errmsg)
         return False, errmsg

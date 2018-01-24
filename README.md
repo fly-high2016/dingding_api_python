@@ -1,6 +1,8 @@
-# 钉钉的服务端api，用python写的接口
+## 2018年1月24日修正了几处bug
 
-## 使用的使用conf.py文件改名为config.py，然后修改自己的corpid和secret
+## 钉钉的服务端api，用python写的接口
+
+## 使用时请将conf.py文件改名为config.py，然后修改自己的corpid和secret
 
 ## 需要第三方库
 poster 0.8.1

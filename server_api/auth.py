@@ -8,7 +8,7 @@ from config import API_ADDR
 from utils import http_get
 from random import randint
 
-default_char_list='ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz123456_'
+default_char_list='ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890_'
 
 
 def get_access_token(corp_id, secret):
@@ -32,7 +32,7 @@ def get_jsapi_ticket(access_token):
 
 
 def get_timestamp():
-    return str(int(time()))
+    return str(int(time.time()))
 
 
 def sha1(s):
