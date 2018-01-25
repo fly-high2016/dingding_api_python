@@ -9,6 +9,7 @@ from poster.encode import multipart_encode
 from poster.streaminghttp import register_openers
 
 path_log_file = '/tmp/dingding_test.log'
+#Windows下会向python解释器所在分区写入日志 | tmp文件夹需要预先手工建立
 
 logger = logging.getLogger('dingding')
 file_handler = logging.FileHandler(path_log_file)
