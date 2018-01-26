@@ -7,7 +7,7 @@ from config import API_ADDR
 from utils import http_post
 
 
-def send(access_token, touser, toparty, send_type, content, agentid=3873399):
+def send(access_token, touser, toparty, send_type, content, agentid=160553128):
     """
     params:
         content: send_type对应的content，是一个字典，具体type的字段属性看文档
@@ -18,7 +18,6 @@ def send(access_token, touser, toparty, send_type, content, agentid=3873399):
     }
     url += urlencode(args)
     data = {
-        "access_token": access_token,
         "touser": touser,
         "toparty": toparty,
         "agentid": agentid,
