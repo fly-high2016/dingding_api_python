@@ -230,3 +230,12 @@ def get_department_detail_userlist(access_token, department_id,
 
     url += urlencode(args)
     return http_get(url)
+    
+    
+def get_admin(access_token):
+    url = 'https://%s/user/get_admin?' % API_ADDR
+    args = {
+        'access_token': access_token
+    }
+    url += urlencode(args)
+    return http_get(url)
